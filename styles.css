@@ -1,13 +1,34 @@
 body {
     margin: 0;
+    width: auto;
+    padding: 0;
+}
+html {
+    margin: 0;
+    padding: 0;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 5;
+    flex-shrink: 0;
+    margin: auto;
+    padding-top: 138px;
+    align-content: flex-start;
+    justify-content: flex-end;
+    height: auto;
 }
 #top-bar {
     display: flex;
     background-color: white;
+    flex-direction: row;
+    flex-flow: row;
     height: 48px;
-    width: 100%;
+    width: auto;
     margin: 0;
     align-items: center;
+    align-content: center;
+    justify-items: center;
     justify-content: space-between;
     padding: 6px;
 }
@@ -38,7 +59,9 @@ body {
 }
 
 #top-right {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 #gmail {
     font-size: 12px;
@@ -46,10 +69,26 @@ body {
 }
 #images {
     font-size: 12px;
+    margin-left: 10px;
 
 }
 #apps {
-
+    border-style: none;
+    background-color: white;
+    color: rgb(117, 117, 117);
+    margin-left: 10px;
+}
+#apps:focus {
+    border-style: none;
+    background-color: white;
+    color: rgb(117, 117, 117);
+    margin-left: 10px;
+    outline: none;
+}
+#apps:hover {
+    border-style: none;
+    background-color: white;
+    color: rgb(54, 54, 54);
 }
 #sign-in {
     border-style: none;
@@ -62,13 +101,46 @@ body {
     height: 30px;
     width: 70px;
     margin-right: 25px;
-
+    margin-left: 13px;
+}
+#sign-in:focus {
+    border-style: none;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: blue;
+    height: 30px;
+    width: 70px;
+    margin-right: 25px;
+    margin-left: 13px;
+    outline: none;
 }
 
 #logo {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     margin: auto;
+}
+#search-icon {
+    display: flex;
+    position: absolute;
+    align-self: flex-start;
+    margin-left: 247px;
+    color: rgb(148, 147, 147);
+    transform: scale(0.8);
+}
+#mic-icon {
+    display: flex;
+    position: absolute;
+    align-self: flex-end;
+    flex-basis: -251px;
+    flex-grow: 1;
+    margin-left: -251px;
+    color: blue;
+    transform: scale(1.05);
 }
 
 #search-box {
@@ -79,21 +151,35 @@ body {
     height: 100px;
 }
 #search-box input {
-    width: 575px;
+    width: 450px;
+    height: 41px;
+    border-radius: 200px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(218, 218, 218);
+    font-size: 18px;
+    padding-left: 30px;
+    margin: auto;
+}
+#search-box input:focus {
+    width: 480px;
     height: 43px;
     border-radius: 200px;
     border-style: solid;
     border-width: 1px;
     border-color: rgb(214, 214, 214);
+    font-size: 18px;
+    padding-left: 30px;
+    outline: none;
 }
 #search-buttons {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-around;
-    width: 280px;
-    flex-grow: 1;
+    width: 292px;
     margin: auto;
+    margin-top: 2px;
+
 }
 #search-buttons button {
     border-style: none;
@@ -104,6 +190,18 @@ body {
     font-size: 14px;
     color: rgb(100, 100, 100);
     text-decoration: none;
+    background-color: rgb(243, 243, 243);
+}
+#search-buttons button:focus {
+    border-style: none;
+    border-radius: 4px;
+    height: 35px;
+    width: 130px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: rgb(100, 100, 100);
+    text-decoration: none;
+    outline: none;
 }
 #search-buttons button:hover {
     border-style: solid;
@@ -111,20 +209,28 @@ body {
     border-radius: 4px;
     border-color: rgb(190, 190, 190);
     height: 35px;
-    width: 140px;
+    width: 130px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     color: rgb(41, 41, 41);
     text-decoration: none;
 }
-
-
+#space {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 10;
+    flex-wrap: wrap;
+    flex-flow: column;
+    margin: 0;
+    padding: 0;
+    height: 452.499984px;
+}
 #bottom-bar {
     display: flex;
     background-color: rgb(241, 240, 240);
-    height: 46px;
+    height: 40px;
     width: 100%;
-    margin: auto;
+    margin: 0;
     align-items: center;
     justify-content: space-between;
     padding: 0;
@@ -144,7 +250,7 @@ body {
 }
 #bottom-left {
     display: block;
-    padding-left: 130px;
+    padding-left: 15px;
 }
 #advertising {
     padding: 15px;
@@ -157,7 +263,7 @@ body {
 }
 
 #bottom-right {
-    padding-right: 130px;
+    padding-right: 15px;
 
 }
 #privacy {
